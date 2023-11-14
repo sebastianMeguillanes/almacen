@@ -1,0 +1,548 @@
+{
+  "ReportGuid": "9bc99b37290747e2b4beb7195ca7b5d3",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportFile": "Rep_general_cargo.mrt",
+  "ReportCreated": "/Date(1667509442000-0400)/",
+  "ReportChanged": "/Date(1668460175000-0400)/",
+  "EngineVersion": "EngineV2",
+  "CalculationMode": "Interpretation",
+  "ReportUnit": "Centimeters",
+  "PreviewSettings": 260039167,
+  "Styles": {
+    "0": {
+      "Ident": "StiStyle",
+      "Name": "Style1",
+      "Border": ";;;;;;;solid:0,0,0",
+      "Brush": "solid:231,230,230",
+      "TextBrush": "solid:0,0,0",
+      "NegativeTextBrush": "solid:231,230,230"
+    }
+  },
+  "Dictionary": {
+    "Variables": {
+      "0": {
+        "Name": "usuario",
+        "DialogInfo": {
+          "DateTimeType": "DateAndTime",
+          "SortDirection": "None",
+          "CheckedColumn": "null;"
+        },
+        "Alias": "usuario",
+        "Type": "System.String"
+      }
+    },
+    "DataSources": {
+      "0": {
+        "Ident": "StiPostgreSQLSource",
+        "Name": "grupo_contable",
+        "Alias": "grupo_contable",
+        "Columns": {
+          "0": {
+            "Name": "grupo_contableaños",
+            "Index": -1,
+            "NameInSource": "grupo_contableaños",
+            "Alias": "grupo_contableaños",
+            "Type": "System.Int64"
+          },
+          "1": {
+            "Name": "grupo_contablecodigo",
+            "Index": -1,
+            "NameInSource": "grupo_contablecodigo",
+            "Alias": "grupo_contablecodigo",
+            "Type": "System.Int64"
+          },
+          "2": {
+            "Name": "grupo_contablecondicion",
+            "Index": -1,
+            "NameInSource": "grupo_contablecondicion",
+            "Alias": "grupo_contablecondicion",
+            "Type": "System.Int64"
+          },
+          "3": {
+            "Name": "grupo_contablenombre",
+            "Index": -1,
+            "NameInSource": "grupo_contablenombre",
+            "Alias": "grupo_contablenombre",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "idgrupo_contable",
+            "Index": -1,
+            "NameInSource": "idgrupo_contable",
+            "Alias": "idgrupo_contable",
+            "Type": "System.Int64"
+          }
+        },
+        "NameInSource": "Connection",
+        "SqlCommand": "select * from public.\"grupo_contable\" ORDER BY grupo_contablenombre ASC"
+      },
+      "1": {
+        "Ident": "StiPostgreSQLSource",
+        "Name": "cargo",
+        "Alias": "cargo",
+        "Columns": {
+          "0": {
+            "Name": "cargocondicion",
+            "Index": -1,
+            "NameInSource": "cargocondicion",
+            "Alias": "cargocondicion",
+            "Type": "System.Int64"
+          },
+          "1": {
+            "Name": "cargonombre",
+            "Index": -1,
+            "NameInSource": "cargonombre",
+            "Alias": "cargonombre",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "idcargo",
+            "Index": -1,
+            "NameInSource": "idcargo",
+            "Alias": "idcargo",
+            "Type": "System.Int64"
+          }
+        },
+        "NameInSource": "Connection",
+        "SqlCommand": "select * from public.\"cargo\""
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiPostgreSQLDatabase",
+        "Name": "Connection",
+        "Alias": "Connection",
+        "ConnectionStringEncrypted": "42DJCUYK093iX/nc6VwhG9V0+wLGUXmk4UWhvXlo4S+ByPcCYUuSgWII6BzhEHV732xTy0Zow4FrStXU5XR3u9ES9cv6SAGZbBrVnU4F40bD8g=="
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "4e01a47732e4a57a7969ea866bc9efdf",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiPageHeaderBand",
+          "Name": "PageHeaderBand1",
+          "ClientRectangle": "0,0.4,19.01,3.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text1",
+              "ClientRectangle": "0,0,3.2,2.4",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiImage",
+              "Name": "Image1",
+              "ClientRectangle": "0,0,3.2,2.4",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "Stretch": true,
+              "ImageURL": {
+                "Value": "http://172.16.100.10:84/logo.png"
+              },
+              "ImageBytes": ""
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "Text2",
+              "ClientRectangle": "3.2,0,15.8,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "GOBIERNO MUNICIPAL DE LA CIUDAD DE TARIJA Y LA PROVINCIA CERCADO"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";11;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Text3",
+              "Guid": "c2c6bd62e69af5161124981210c4d7b5",
+              "ClientRectangle": "3.2,0.6,15.8,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "SECRETARÍA MUNICIPAL DE ADMINISTRACIÓN, ECONOMÍA Y FINANZAS"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";11;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Type": "Expression"
+            },
+            "4": {
+              "Ident": "StiText",
+              "Name": "Text4",
+              "Guid": "5d98bad1b013bfc29382be6f29b55007",
+              "ClientRectangle": "3.2,1.2,12.4,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Dirección Administrativa"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";11;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Type": "Expression"
+            },
+            "5": {
+              "Ident": "StiText",
+              "Name": "Text5",
+              "Guid": "45295165322c804c2491bfc604613284",
+              "ClientRectangle": "3.2,1.8,12.4,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Unidad de Bienes y Activos Fijos"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";11;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Type": "Expression"
+            },
+            "6": {
+              "Ident": "StiText",
+              "Name": "Text6",
+              "Guid": "ed21dd928a06b5fe5b57f341491b2f9e",
+              "ClientRectangle": "15.6,1.2,3.4,1.2",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Página: {PageNofM}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Type": "Expression"
+            },
+            "7": {
+              "Ident": "StiText",
+              "Name": "Text7",
+              "ClientRectangle": "0,2.4,19,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "REPORTE GENERAL DE GRUPOS CONTABLES"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";11;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Type": "Expression"
+            },
+            "8": {
+              "Ident": "StiText",
+              "Name": "Text8",
+              "Guid": "e14d145f077b9ed707aeb18e180c404f",
+              "ClientRectangle": "0,3,9.8,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "IMPRESO POR: {usuario}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Margins": {
+                "Left": 5,
+                "Right": 0,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "Type": "Expression"
+            },
+            "9": {
+              "Ident": "StiText",
+              "Name": "Text9",
+              "Guid": "345f84790c8ccfd063fbab8c789543a4",
+              "ClientRectangle": "9.8,3,9.2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "FECHA Y HORA DE IMPRESIÓN: {Time}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Margins": {
+                "Left": 5,
+                "Right": 0,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "Type": "Expression"
+            }
+          }
+        },
+        "1": {
+          "Ident": "StiPageFooterBand",
+          "Name": "PageFooterBand1",
+          "ClientRectangle": "0,26.89,19.01,0.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text10",
+              "ClientRectangle": "0,0.11,9.4,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Direccción: Calle Juan Misael Saracho, esquina Madrid.\r\nTeléfono-Fax: 66-72617."
+              },
+              "HorAlignment": "Right",
+              "VertAlignment": "Center",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Text11",
+              "Guid": "6c3cf41353ee33e3ca9b446cf2e4835d",
+              "ClientRectangle": "9.4,0.11,9.6,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "SICOBIM V2.0.15 (Derechos reservados Área de Desarrollo de la Unidad de Modernización y Tecnologías de Información - 2022)"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            }
+          }
+        },
+        "2": {
+          "Ident": "StiTable",
+          "Name": "Tablegrupo_contable",
+          "ClientRectangle": "0,5,19.01,1.6",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiTableCell",
+              "Name": "Tablegrupo_contable_Cell1",
+              "ClientRectangle": "0,0,2.21,0.79",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Nº"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";10;Bold;",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:191,191,191",
+              "TextBrush": "solid:Black",
+              "Type": "Expression",
+              "ID": 8
+            },
+            "1": {
+              "Ident": "StiTableCell",
+              "Name": "Tablegrupo_contable_Cell2",
+              "ClientRectangle": "2.21,0,12.6,0.79",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "NOMBRE"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";10;Bold;",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:191,191,191",
+              "TextBrush": "solid:Black",
+              "Type": "Expression",
+              "ID": 1
+            },
+            "2": {
+              "Ident": "StiTableCell",
+              "Name": "Tablegrupo_contable_Cell3",
+              "ClientRectangle": "14.81,0,4.19,0.79",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "ESTADO"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";10;Bold;",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:191,191,191",
+              "TextBrush": "solid:Black",
+              "Type": "Expression",
+              "ID": 3
+            },
+            "3": {
+              "Ident": "StiTableCell",
+              "Name": "Tablegrupo_contable_Cell4",
+              "ClientRectangle": "0,0.79,2.21,0.81",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Line}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";7;;",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "SystemVariables",
+              "ID": 9
+            },
+            "4": {
+              "Ident": "StiTableCell",
+              "Name": "Tablegrupo_contable_Cell5",
+              "ClientRectangle": "2.21,0.79,12.6,0.81",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{cargo.cargonombre}"
+              },
+              "HorAlignment": "Width",
+              "VertAlignment": "Center",
+              "Font": ";7;;",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Margins": {
+                "Left": 5,
+                "Right": 5,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "Type": "DataColumn",
+              "ID": 5
+            },
+            "5": {
+              "Ident": "StiTableCell",
+              "Name": "Tablegrupo_contable_Cell6",
+              "ClientRectangle": "14.81,0.79,4.19,0.81",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{(cargo.cargocondicion == 0) ? \"INACTIVO\" : \"ACTIVO\"}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";7;;",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression",
+              "ID": 7
+            }
+          },
+          "MinHeight": 0.4,
+          "DataSourceName": "cargo",
+          "EvenStyle": "Style1",
+          "RowCount": 2,
+          "ColumnCount": 3,
+          "HeaderRowsCount": 1,
+          "NumberID": 12
+        }
+      },
+      "PageWidth": 21.01,
+      "PageHeight": 29.69,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 1,
+        "Right": 1,
+        "Top": 1,
+        "Bottom": 1
+      }
+    }
+  }
+}

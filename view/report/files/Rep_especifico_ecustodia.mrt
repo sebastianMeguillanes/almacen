@@ -1,0 +1,994 @@
+{
+  "ReportGuid": "4db1f2b7bb7abe9fdd6385fcbf683f17",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportFile": "Rep_especifico_ecustodia.mrt",
+  "ReportCreated": "/Date(1667509442000-0400)/",
+  "ReportChanged": "/Date(1669041123000-0400)/",
+  "EngineVersion": "EngineV2",
+  "CalculationMode": "Interpretation",
+  "ReportUnit": "Centimeters",
+  "PreviewSettings": 260039167,
+  "Styles": {
+    "0": {
+      "Ident": "StiStyle",
+      "Name": "Style1",
+      "Border": ";;;;;;;solid:0,0,0",
+      "Brush": "solid:231,230,230",
+      "TextBrush": "solid:0,0,0",
+      "NegativeTextBrush": "solid:231,230,230"
+    }
+  },
+  "Dictionary": {
+    "Variables": {
+      "0": {
+        "Name": "usuario",
+        "DialogInfo": {
+          "DateTimeType": "DateAndTime",
+          "SortDirection": "None",
+          "CheckedColumn": "null;"
+        },
+        "Alias": "usuario",
+        "Type": "System.String"
+      },
+      "1": {
+        "Name": "idresponsable",
+        "DialogInfo": {
+          "DateTimeType": "DateAndTime",
+          "SortDirection": "None",
+          "CheckedColumn": "null;"
+        },
+        "Alias": "idresponsable",
+        "Type": "System.String"
+      }
+    },
+    "DataSources": {
+      "0": {
+        "Ident": "StiPostgreSQLSource",
+        "Name": "activo",
+        "Alias": "activo",
+        "Columns": {
+          "0": {
+            "Name": "activocodigo",
+            "Index": -1,
+            "NameInSource": "activocodigo",
+            "Alias": "activocodigo",
+            "Type": "System.String"
+          },
+          "1": {
+            "Name": "activocodigoadi",
+            "Index": -1,
+            "NameInSource": "activocodigoadi",
+            "Alias": "activocodigoadi",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "activocondicion",
+            "Index": -1,
+            "NameInSource": "activocondicion",
+            "Alias": "activocondicion",
+            "Type": "System.Int64"
+          },
+          "3": {
+            "Name": "activoconvenio",
+            "Index": -1,
+            "NameInSource": "activoconvenio",
+            "Alias": "activoconvenio",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "activocosto_compra",
+            "Index": -1,
+            "NameInSource": "activocosto_compra",
+            "Alias": "activocosto_compra",
+            "Type": "System.String"
+          },
+          "5": {
+            "Name": "activodescripcion",
+            "Index": -1,
+            "NameInSource": "activodescripcion",
+            "Alias": "activodescripcion",
+            "Type": "System.String"
+          },
+          "6": {
+            "Name": "activodocumento",
+            "Index": -1,
+            "NameInSource": "activodocumento",
+            "Alias": "activodocumento",
+            "Type": "System.String"
+          },
+          "7": {
+            "Name": "activoestado",
+            "Index": -1,
+            "NameInSource": "activoestado",
+            "Alias": "activoestado",
+            "Type": "System.Int64"
+          },
+          "8": {
+            "Name": "activofecha_incorporacion",
+            "Index": -1,
+            "NameInSource": "activofecha_incorporacion",
+            "Alias": "activofecha_incorporacion",
+            "Type": "System.DateTime"
+          },
+          "9": {
+            "Name": "activonombre",
+            "Index": -1,
+            "NameInSource": "activonombre",
+            "Alias": "activonombre",
+            "Type": "System.String"
+          },
+          "10": {
+            "Name": "activoobservacion",
+            "Index": -1,
+            "NameInSource": "activoobservacion",
+            "Alias": "activoobservacion",
+            "Type": "System.String"
+          },
+          "11": {
+            "Name": "activorube",
+            "Index": -1,
+            "NameInSource": "activorube",
+            "Alias": "activorube",
+            "Type": "System.String"
+          },
+          "12": {
+            "Name": "activotimestamp",
+            "Index": -1,
+            "NameInSource": "activotimestamp",
+            "Alias": "activotimestamp",
+            "Type": "System.DateTime"
+          },
+          "13": {
+            "Name": "idactivo",
+            "Index": -1,
+            "NameInSource": "idactivo",
+            "Alias": "idactivo",
+            "Type": "System.Int64"
+          },
+          "14": {
+            "Name": "idauxiliar",
+            "Index": -1,
+            "NameInSource": "idauxiliar",
+            "Alias": "idauxiliar",
+            "Type": "System.Int64"
+          },
+          "15": {
+            "Name": "idorganismo_financiero",
+            "Index": -1,
+            "NameInSource": "idorganismo_financiero",
+            "Alias": "idorganismo_financiero",
+            "Type": "System.Int64"
+          },
+          "16": {
+            "Name": "idresponsable",
+            "Index": -1,
+            "NameInSource": "idresponsable",
+            "Alias": "idresponsable",
+            "Type": "System.Int64"
+          },
+          "17": {
+            "Name": "idusuario",
+            "Index": -1,
+            "NameInSource": "idusuario",
+            "Alias": "idusuario",
+            "Type": "System.Int64"
+          }
+        },
+        "NameInSource": "Connection",
+        "SqlCommand": "select * from public.\"activo\" WHERE idresponsable={idresponsable}"
+      },
+      "1": {
+        "Ident": "StiPostgreSQLSource",
+        "Name": "cargo",
+        "Alias": "cargo",
+        "Columns": {
+          "0": {
+            "Name": "cargocondicion",
+            "Index": -1,
+            "NameInSource": "cargocondicion",
+            "Alias": "cargocondicion",
+            "Type": "System.Int64"
+          },
+          "1": {
+            "Name": "cargonombre",
+            "Index": -1,
+            "NameInSource": "cargonombre",
+            "Alias": "cargonombre",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "idcargo",
+            "Index": -1,
+            "NameInSource": "idcargo",
+            "Alias": "idcargo",
+            "Type": "System.Int64"
+          }
+        },
+        "NameInSource": "Connection",
+        "SqlCommand": "select * from public.\"cargo\""
+      },
+      "2": {
+        "Ident": "StiPostgreSQLSource",
+        "Name": "oficina",
+        "Alias": "oficina",
+        "Columns": {
+          "0": {
+            "Name": "idoficina",
+            "Index": -1,
+            "NameInSource": "idoficina",
+            "Alias": "idoficina",
+            "Type": "System.Int64"
+          },
+          "1": {
+            "Name": "idunidad_administrativa",
+            "Index": -1,
+            "NameInSource": "idunidad_administrativa",
+            "Alias": "idunidad_administrativa",
+            "Type": "System.Int64"
+          },
+          "2": {
+            "Name": "oficinacodigo",
+            "Index": -1,
+            "NameInSource": "oficinacodigo",
+            "Alias": "oficinacodigo",
+            "Type": "System.Int64"
+          },
+          "3": {
+            "Name": "oficinacondicion",
+            "Index": -1,
+            "NameInSource": "oficinacondicion",
+            "Alias": "oficinacondicion",
+            "Type": "System.Int64"
+          },
+          "4": {
+            "Name": "oficinanombre",
+            "Index": -1,
+            "NameInSource": "oficinanombre",
+            "Alias": "oficinanombre",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "Connection",
+        "SqlCommand": "select * from public.\"oficina\""
+      },
+      "3": {
+        "Ident": "StiPostgreSQLSource",
+        "Name": "persona",
+        "Alias": "persona",
+        "Columns": {
+          "0": {
+            "Name": "idcargo",
+            "Index": -1,
+            "NameInSource": "idcargo",
+            "Alias": "idcargo",
+            "Type": "System.Int64"
+          },
+          "1": {
+            "Name": "idoficina",
+            "Index": -1,
+            "NameInSource": "idoficina",
+            "Alias": "idoficina",
+            "Type": "System.Int64"
+          },
+          "2": {
+            "Name": "idpersona",
+            "Index": -1,
+            "NameInSource": "idpersona",
+            "Alias": "idpersona",
+            "Type": "System.Int64"
+          },
+          "3": {
+            "Name": "personaap",
+            "Index": -1,
+            "NameInSource": "personaap",
+            "Alias": "personaap",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "personaci",
+            "Index": -1,
+            "NameInSource": "personaci",
+            "Alias": "personaci",
+            "Type": "System.String"
+          },
+          "5": {
+            "Name": "personaimagen",
+            "Index": -1,
+            "NameInSource": "personaimagen",
+            "Alias": "personaimagen",
+            "Type": "System.String"
+          },
+          "6": {
+            "Name": "personanombre",
+            "Index": -1,
+            "NameInSource": "personanombre",
+            "Alias": "personanombre",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "Connection",
+        "SqlCommand": "select * from public.\"persona\""
+      },
+      "4": {
+        "Ident": "StiPostgreSQLSource",
+        "Name": "personal",
+        "Alias": "personal",
+        "Columns": {
+          "0": {
+            "Name": "idpersona",
+            "Index": -1,
+            "NameInSource": "idpersona",
+            "Alias": "idpersona",
+            "Type": "System.Int64"
+          },
+          "1": {
+            "Name": "idpersonal",
+            "Index": -1,
+            "NameInSource": "idpersonal",
+            "Alias": "idpersonal",
+            "Type": "System.Int64"
+          },
+          "2": {
+            "Name": "personalcondicion",
+            "Index": -1,
+            "NameInSource": "personalcondicion",
+            "Alias": "personalcondicion",
+            "Type": "System.Int64"
+          }
+        },
+        "NameInSource": "Connection",
+        "SqlCommand": "select * from public.\"personal\""
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiPostgreSQLDatabase",
+        "Name": "Connection",
+        "Alias": "Connection",
+        "ConnectionStringEncrypted": "42DJCUYK093iX/nc6VwhG9V0+wLGUXmk4UWhvXlo4S+ByPcCYUuSgWII6BzhEHV732xTy0Zow4FrStXU5XR3u9ES9cv6SAGZbBrVnU4F40bD8g=="
+      }
+    },
+    "Relations": {
+      "0": {
+        "Name": "Relación",
+        "ChildColumns": {
+          "0": "idresponsable"
+        },
+        "ParentColumns": {
+          "0": "idpersonal"
+        },
+        "NameInSource": "Relación",
+        "Alias": "Relación",
+        "ParentSource": "personal",
+        "ChildSource": "activo"
+      },
+      "1": {
+        "Name": "Relación2",
+        "ChildColumns": {
+          "0": "idpersona"
+        },
+        "ParentColumns": {
+          "0": "idpersona"
+        },
+        "NameInSource": "Relación2",
+        "Alias": "Relación2",
+        "ParentSource": "persona",
+        "ChildSource": "personal"
+      },
+      "2": {
+        "Name": "Relación3",
+        "ChildColumns": {
+          "0": "idoficina"
+        },
+        "ParentColumns": {
+          "0": "idoficina"
+        },
+        "NameInSource": "Relación3",
+        "Alias": "Relación3",
+        "ParentSource": "oficina",
+        "ChildSource": "persona"
+      },
+      "3": {
+        "Name": "Relación4",
+        "ChildColumns": {
+          "0": "idcargo"
+        },
+        "ParentColumns": {
+          "0": "idcargo"
+        },
+        "NameInSource": "Relación4",
+        "Alias": "Relación4",
+        "ParentSource": "cargo",
+        "ChildSource": "persona"
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "4e01a47732e4a57a7969ea866bc9efdf",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiPageHeaderBand",
+          "Name": "PageHeaderBand1",
+          "ClientRectangle": "0,0.4,19.01,5",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text1",
+              "ClientRectangle": "0,0,3.2,2.4",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiImage",
+              "Name": "Image1",
+              "ClientRectangle": "0,0,3.2,2.4",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "Stretch": true,
+              "ImageURL": {
+                "Value": "http://172.16.100.10:84/logo.png"
+              },
+              "ImageBytes": ""
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "Text2",
+              "ClientRectangle": "3.2,0,15.8,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "GOBIERNO MUNICIPAL DE LA CIUDAD DE TARIJA Y LA PROVINCIA CERCADO"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";11;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Text3",
+              "Guid": "c2c6bd62e69af5161124981210c4d7b5",
+              "ClientRectangle": "3.2,0.6,15.8,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "SECRETARÍA MUNICIPAL DE ADMINISTRACIÓN, ECONOMÍA Y FINANZAS"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";11;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Type": "Expression"
+            },
+            "4": {
+              "Ident": "StiText",
+              "Name": "Text4",
+              "Guid": "5d98bad1b013bfc29382be6f29b55007",
+              "ClientRectangle": "3.2,1.2,12.4,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Dirección Administrativa"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";11;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Type": "Expression"
+            },
+            "5": {
+              "Ident": "StiText",
+              "Name": "Text5",
+              "Guid": "45295165322c804c2491bfc604613284",
+              "ClientRectangle": "3.2,1.8,12.4,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Unidad de Bienes y Activos Fijos"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";11;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Type": "Expression"
+            },
+            "6": {
+              "Ident": "StiText",
+              "Name": "Text6",
+              "Guid": "ed21dd928a06b5fe5b57f341491b2f9e",
+              "ClientRectangle": "15.6,1.2,3.4,1.2",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Página: {PageNofM}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Type": "Expression"
+            },
+            "7": {
+              "Ident": "StiText",
+              "Name": "Text7",
+              "ClientRectangle": "0,2.4,19,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "REPORTE DE EFECTOS EN CUSTODIA"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";11;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Type": "Expression"
+            },
+            "8": {
+              "Ident": "StiText",
+              "Name": "Text8",
+              "Guid": "e14d145f077b9ed707aeb18e180c404f",
+              "ClientRectangle": "0,3,9.8,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "IMPRESO POR: {usuario}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Margins": {
+                "Left": 5,
+                "Right": 0,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "Type": "Expression"
+            },
+            "9": {
+              "Ident": "StiText",
+              "Name": "Text9",
+              "Guid": "345f84790c8ccfd063fbab8c789543a4",
+              "ClientRectangle": "9.8,3,9.2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "FECHA Y HORA DE IMPRESIÓN: {Time}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Margins": {
+                "Left": 5,
+                "Right": 0,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "Type": "Expression"
+            },
+            "10": {
+              "Ident": "StiText",
+              "Name": "Text12",
+              "Guid": "45e9e1344bf31f8a8c43de7607590ae5",
+              "ClientRectangle": "0,3.6,9.8,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "FUNCIONARIO: {activo.Relación.Relación2.personanombre} {activo.Relación.Relación2.personaap}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Margins": {
+                "Left": 5,
+                "Right": 0,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "Type": "Expression"
+            },
+            "11": {
+              "Ident": "StiText",
+              "Name": "Text13",
+              "Guid": "1f5bfac425dbb1b72b7536570264aa2f",
+              "ClientRectangle": "9.8,3.6,9.2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "DOCUMENTO DE IDENTIDAD: {activo.Relación.Relación2.personaci}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Margins": {
+                "Left": 5,
+                "Right": 0,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "Type": "Expression"
+            },
+            "12": {
+              "Ident": "StiText",
+              "Name": "Text14",
+              "Guid": "bd1c92e4ea4fa8be2638a0362d2d8e79",
+              "ClientRectangle": "0,4.2,9.8,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "OFICINA: {activo.Relación.Relación2.Relación3.oficinanombre}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Margins": {
+                "Left": 5,
+                "Right": 0,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "Type": "Expression"
+            },
+            "13": {
+              "Ident": "StiText",
+              "Name": "Text15",
+              "Guid": "d6cf867ca7744e283be52bb985bc6e6c",
+              "ClientRectangle": "9.8,4.2,9.2,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "CARGO: {activo.Relación.Relación2.Relación4.cargonombre}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;;;;;;;solid:0,0,0",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Margins": {
+                "Left": 5,
+                "Right": 0,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "Type": "Expression"
+            }
+          }
+        },
+        "1": {
+          "Ident": "StiPageFooterBand",
+          "Name": "PageFooterBand1",
+          "ClientRectangle": "0,26.89,19.01,0.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text10",
+              "ClientRectangle": "0,0.11,9.4,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Direccción: Calle Juan Misael Saracho, esquina Madrid.\r\nTeléfono-Fax: 66-72617."
+              },
+              "HorAlignment": "Right",
+              "VertAlignment": "Center",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Text11",
+              "Guid": "6c3cf41353ee33e3ca9b446cf2e4835d",
+              "ClientRectangle": "9.4,0.11,9.6,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "SICOBIM V2.0.15 (Derechos reservados Área de Desarrollo de la Unidad de Modernización y Tecnologías de Información - 2022)"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:",
+              "TextBrush": "solid:0,0,0",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            }
+          }
+        },
+        "2": {
+          "Ident": "StiTable",
+          "Name": "Tablegrupo_contable",
+          "ClientRectangle": "0,6.2,19.01,1.6",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiTableCell",
+              "Name": "Tablegrupo_contable_Cell1",
+              "ClientRectangle": "0,-0.01,1.19,0.79",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Nº"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";10;Bold;",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:191,191,191",
+              "TextBrush": "solid:Black",
+              "Type": "Expression",
+              "ID": 8
+            },
+            "1": {
+              "Ident": "StiTableCell",
+              "Name": "Tablegrupo_contable_Cell2",
+              "ClientRectangle": "1.19,-0.01,3.2,0.79",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "CÓDIGO"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";10;Bold;",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:191,191,191",
+              "TextBrush": "solid:Black",
+              "Type": "Expression",
+              "ID": 12
+            },
+            "2": {
+              "Ident": "StiTableCell",
+              "Name": "Tablegrupo_contable_Cell3",
+              "ClientRectangle": "4.39,-0.01,10.01,0.79",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "NOMBRE"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";10;Bold;",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:191,191,191",
+              "TextBrush": "solid:Black",
+              "Type": "Expression",
+              "ID": 1
+            },
+            "3": {
+              "Ident": "StiTableCell",
+              "Name": "Tablegrupo_contable_Cell4",
+              "ClientRectangle": "14.4,-0.01,4.6,0.79",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "ESTADO"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";10;Bold;",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:191,191,191",
+              "TextBrush": "solid:Black",
+              "Type": "Expression",
+              "ID": 3
+            },
+            "4": {
+              "Ident": "StiTableCell",
+              "Name": "Tablegrupo_contable_Cell5",
+              "ClientRectangle": "0,0.78,1.19,0.81",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Line}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";7;;",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "SystemVariables",
+              "ID": 9
+            },
+            "5": {
+              "Ident": "StiTableCell",
+              "Name": "Tablegrupo_contable_Cell6",
+              "ClientRectangle": "1.19,0.78,3.2,0.81",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{activo.activocodigo} - {activo.activocodigoadi}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression",
+              "ID": 13
+            },
+            "6": {
+              "Ident": "StiTableCell",
+              "Name": "Tablegrupo_contable_Cell7",
+              "ClientRectangle": "4.39,0.78,10.01,0.81",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{activo.activonombre}"
+              },
+              "HorAlignment": "Width",
+              "VertAlignment": "Center",
+              "Font": ";7;;",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Margins": {
+                "Left": 5,
+                "Right": 5,
+                "Top": 0,
+                "Bottom": 0
+              },
+              "Type": "DataColumn",
+              "ID": 5
+            },
+            "7": {
+              "Ident": "StiTableCell",
+              "Name": "Tablegrupo_contable_Cell8",
+              "ClientRectangle": "14.4,0.78,4.6,0.81",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{(activo.activoestado == 1) ? \"ACTIVO\" : \"INACTIVO\"}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";7;;",
+              "Border": "All;105,105,105;;;;;;solid:105,105,105",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression",
+              "ID": 7
+            }
+          },
+          "MinHeight": 0.4,
+          "DataSourceName": "activo",
+          "EvenStyle": "Style1",
+          "RowCount": 2,
+          "ColumnCount": 4,
+          "HeaderRowsCount": 1,
+          "NumberID": 14
+        }
+      },
+      "PageWidth": 21.01,
+      "PageHeight": 29.69,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 1,
+        "Right": 1,
+        "Top": 1,
+        "Bottom": 1
+      }
+    },
+    "1": {
+      "Ident": "StiPage",
+      "Name": "subReport_1",
+      "Guid": "481acc0b8d7167979b0736b67b4c15f0",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "PageWidth": 4.6,
+      "PageHeight": 29.7,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 1,
+        "Right": 1,
+        "Top": 1,
+        "Bottom": 1
+      }
+    }
+  }
+}

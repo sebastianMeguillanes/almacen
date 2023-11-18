@@ -1,24 +1,19 @@
-<?php 
+<?php
 
-//Ip de la pc servidor de base de datos
-define("DB_HOST","181.188.156.195");
+// Datos de la base de datos
+define("DB_HOST", "localhost");
 
-//Nombre de la base de datos
-define("DB_NAME", "almacenucb");
+define("DB_NAME", "almacenUCB1");
 
-//Usuario de la base de datos
-define("DB_USERNAME", "postgres");
+define("DB_USERNAME", "root"); // Cambia "root" por tu nombre de usuario de MySQL
 
-//Contraseña del usuario de la base de datos
-define("DB_PASSWORD", "admin1234");
+define("DB_PASSWORD", "Crossfire416");
 
-//definimos la codificación de los caracteres
-define("DB_ENCODE","utf8");
+define("DB_PORT", "3306"); // Cambia "3306" por el puerto correcto de tu servidor MySQL
 
-//Usuario de la base de datos
-define("DB_PORT", "18009");
+define("DB_ENCODE", "utf8");
 
-//Definimos una constante como nombre del proyecto
-define("PRO_NOMBRE","Sistema de Ventas para la Universidad Católica Boliviana");
+// Nombre del proyecto
+define("PRO_NOMBRE", "Sistema de Ventas para la Universidad Católica Boliviana");
 
 ?>

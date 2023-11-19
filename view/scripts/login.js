@@ -1,7 +1,7 @@
 function verificar() {
     var logina = $("#usuario").val();
     var clavea = $("#contrasenia").val();
-
+    console.log(logina, clavea);
     jQuery.ajax({
         url: "../ajax/usuario.php?op=5",
         type: "POST",

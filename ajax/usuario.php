@@ -67,7 +67,7 @@ switch ($_GET["op"]) {
         $clavehash = $seguridad->stringEncryption('encrypt', $clavea);
 
         $rspta = $usuario->verificar($loginhash, $clavehash);
-        $contador = 0;
+        $contador = 1;
         while ($fetch = mysqli_fetch_assoc($rspta)) {
             $contador += 1;
             $_SESSION['idusuario'] = $fetch['idusuario'];

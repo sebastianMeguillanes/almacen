@@ -84,3 +84,4 @@ switch ($_GET["op"]) {
         header("Location: ../index.php");
         break;
 }
+?>

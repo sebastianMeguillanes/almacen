@@ -1,5 +1,6 @@
 <?php
-require_once "../config/Conexion.php";
+require_once(__DIR__ . '/../config/Conexion.php');
+
 
 Class Usuario
 {

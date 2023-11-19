@@ -1,48 +1,43 @@
 <?php
 require_once "../model/Locacion.php";
 
-$locacion=new Locacion();
+$locacion = new Locacion();
 
+$idlocacion = isset($_POST["idlocacion"]) ? $_POST["idlocacion"] : "";
+$ubicacion = isset($_POST["ubicacion"]) ? mb_strtoupper($_POST["ubicacion"]) : "";
 
-$idlocacion=isset($_POST["idlocacion"])? $_POST["idlocacion"]:"";
-$ubicacion=isset($_POST["ubicacion"])? mb_strtoupper($_POST["ubicacion"]):"";
-
-
-
-switch($_GET["op"])
-{
+switch ($_GET["op"]) {
     case '0':
-		$rspta=$locacion->listar();
- 		$data= Array();
+        $rspta = $locacion->listar();
+        $data = Array();
 
- 		while ($reg = pg_fetch_assoc($rspta))
-        {			
-			$data[]=array(
-                "0"=>$reg['idlocacion'],
-                "1"=>$reg['ubicacion']
+        while ($reg = mysqli_fetch_assoc($rspta)) {
+            $data[] = array(
+                "0" => $reg['idlocacion'],
+                "1" => $reg['ubicacion']
             );
-		}
- 		echo json_encode($data);
+        }
+        echo json_encode($data);
+        break;
 
-	break;
     case '1':
-        if (!is_numeric($idlocacion))
-        {
-            $rspta=$locacion->insertar($ubicacion);
-		    echo $rspta ? "1:la locacion fué registrado" : "0:El locacion no fué registrado";
+        if (!is_numeric($idlocacion)) {
+            $rspta = $locacion->insertar($ubicacion);
+            echo $rspta ? "1:La locación fue registrada" : "0:La locación no fue registrada";
+        } else {
+            $rspta = $locacion->editar($idlocacion, $ubicacion);
+            echo $rspta ? "1:La locación fue actualizada" : "0:La locación no fue actualizada";
         }
-        else
-        {
-            $rspta=$locacion->editar($idlocacion, $ubicacion);
-		    echo $rspta ? "1:El Proveedor fué actualizado" : "0:El Proveedor no fué actualizado";
-        }
-    break;
+        break;
+
     case '2':
-        $rspta=pg_fetch_assoc($locacion->mostrar($idlocacion));
- 		echo json_encode($rspta);
-    break;
+        $rspta = mysqli_fetch_assoc($locacion->mostrar($idlocacion));
+        echo json_encode($rspta);
+        break;
+
     case '3':
-        $rspta=$locacion->eliminar($idlocacion);
-        echo $rspta ? "1:El locacion fué eliminado" : "0:El locacion no fué eliminado";
-    break;
+        $rspta = $locacion->eliminar($idlocacion);
+        echo $rspta ? "1:La locación fue eliminada" : "0:La locación no fue eliminada";
+        break;
 }
+?>

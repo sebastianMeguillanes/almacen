@@ -1,10 +1,8 @@
 <?php
-session_start();
-require_once('../model/Usuario.php');
-$usuario = new Usuario();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-require_once "seguridad.php";
-$seguridad = new seguridad();
+session_start();
 
 $idusuario = isset($_POST["idusuario"]) ? $_POST["idusuario"] : "";
 $nombre = isset($_POST["nombre"]) ? mb_strtoupper($_POST["nombre"]) : "";

@@ -1,6 +1,6 @@
 
  <?php
-  $miVariable = isset($_POST["idusuario"]);
+  $miVariable =$_POST["idusuario"];
   var_dump($miVariable);
   ?> 
   <!-- content -->

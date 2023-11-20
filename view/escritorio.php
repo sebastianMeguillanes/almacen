@@ -1,6 +1,6 @@
 
  <?php
-  dd(isset($_SESSION['nombrepersona']));
+  (isset($_SESSION['nombrepersona']));
   ?> 
   <!-- content -->
   <div id="content" class="app-content box-shadow-z0" role="main">

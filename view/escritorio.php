@@ -1,6 +1,7 @@
 
  <?php
-  (isset($_SESSION['nombrepersona']));
+  $miVariable = isset($_POST["idusuario"]);
+  var_dump($miVariable);
   ?> 
   <!-- content -->
   <div id="content" class="app-content box-shadow-z0" role="main">

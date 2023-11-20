@@ -70,8 +70,8 @@ switch ($_GET["op"]) {
         $contador = 0;
         while ($fetch = mysqli_fetch_assoc($rspta)) {
             $contador += 1;
-            $_SESSION['idusuario'] = 1;
-            $_SESSION['nombrepersona'] = 'fer';
+            $_SESSION['idusuario'] = $fetch['idusuario'];
+            $_SESSION['nombrepersona'] = $fetch['nombrepersona'];
         }
         echo $contador;
         break;

@@ -1,4 +1,5 @@
 function verificar() {
+    
     var logina = $("#usuario").val();
     var clavea = $("#contrasenia").val();
     jQuery.ajax({

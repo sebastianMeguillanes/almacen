@@ -9,7 +9,6 @@ function verificar() {
         data: { "logina": logina, "clavea": clavea }
     }).done(function (data) {
         if (data != 0) {
-            alert('Ingreso exitoso');
             $(location).attr("href", "escritorio.php");
         } else {
             Swal.fire({
@@ -18,7 +17,7 @@ function verificar() {
             });
         }
     }).fail(function (jqXHR, textStatus, errorThrown) {
-        console.error("la puta mader:", textStatus, errorThrown);
+        console.error("error:", textStatus, errorThrown);
         console.error("Respuesta del servidor:", jqXHR.responseText);
     });
 }

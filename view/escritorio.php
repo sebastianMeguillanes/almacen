@@ -1,8 +1,7 @@
 
- <?php
-  $miVariable =$_POST["idusuario"];
-  var_dump($miVariable);
-  ?> 
+<?php
+  include_once("header.php");
+  ?>
   <!-- content -->
   <div id="content" class="app-content box-shadow-z0" role="main">
     <div class="app-header white box-shadow">
@@ -166,3 +165,6 @@
 	</div>
 </div>
 
+<?php
+include_once("footer.php");
+?>
